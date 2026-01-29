@@ -1,10 +1,7 @@
 from to_do import TODO
-
 def task3(text: str) -> dict[str, int]:
 
-    text = text.lower()
-
-    words = text.split()
+    words = text.lower().split()
 
     result = {}
 
@@ -21,3 +18,8 @@ def task3(text: str) -> dict[str, int]:
                     result[first] = 1
 
     return result
+
+if __name__ == "__main__":
+
+    print(task3(text= "Anna area idea omega echo apple"))
+    print(task3(text= "Hello world"))
