@@ -14,7 +14,6 @@ def task9(sentence: str) -> int:
             if lower_character in points:
                 total += points[lower_character]
             else:
-
                 if character.islower():
                     total += 4
                 else:
