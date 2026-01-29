@@ -1,7 +1,22 @@
 from to_do import TODO
-
-
 def task8(sentence: str) -> bool:
-    return TODO(
-        "Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword"
-    )
+
+    total = 0
+
+    for character in sentence:
+        if character.isdigit():
+            total += int(character)
+
+    total = total - 1
+
+    if total % 5 == 0:
+        result = True
+    else:
+        result = False
+
+    return result
+
+if __name__ == "__main__":
+
+    print(task8(sentence="a2b4c"))
+    print(task8(sentence="abc3"))
