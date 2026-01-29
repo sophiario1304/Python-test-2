@@ -1,7 +1,8 @@
 from to_do import TODO
+import math
 def task2(ratings: dict[str, list[float]]) -> str:
 
-    highest_average = 0
+    highest_average = -math.inf
     result = ""
 
     for product in ratings:
@@ -19,7 +20,6 @@ def task2(ratings: dict[str, list[float]]) -> str:
             result = product
 
     return result
-
 
 if __name__ == "__main__":
 
