@@ -1,17 +1,17 @@
-from typing import Any
 import math
+from typing import Any
 from to_do import TODO
 def task1(library: dict[str, dict[str, Any]]) -> str:
 
-    min_pages = math.inf
+    least_pages = math.inf
     result = ""
 
-    for book,details in library:
+    for book,details in library.items():
         pages = details["pages"]
         genre = details["genre"]
 
-        if pages < min_pages:
-            min_pages = pages
+        if pages < least_pages:
+            least_pages = pages
             result = f"{book}-{genre}"
 
     return result
